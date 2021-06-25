@@ -13,7 +13,7 @@ const passport = require("passport");
 //Routers
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/api/users");
-const productsRouter = require("./routes/api/products");
+const matchRouter = require("./routes/api/matches");
 
 const app = express();
 require("./db/connection");
@@ -25,8 +25,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: MongoDbStore.create({
-      mongoUrl:
-        "mongodb+srv://rehan:rehan@cluster0.qhfay.mongodb.net/shop?retryWrites=true&w=majority",
+      mongoUrl:"mongodb+srv://muzi123:muzammil123@cluster0.ip9h9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
       collectionName: "sessions",
     }),
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, //24 hours
@@ -88,7 +87,6 @@ app.use(function (req, res, next) {
     "Access-Control-Allow-Headers",
     "X-Requested-With,content-type"
   );
-  //res.setHeader("Content-Type", "text/plain");
 
   // Set to true if you need the website to include cookies in the requests sent
   // to the API (e.g. in case you use sessions)
@@ -104,6 +102,7 @@ app.use(function (req, res, next) {
 });
 app.use("/", indexRouter);
 app.use("/api/users", usersRouter);
+app.use("/api/matches", matchRouter);
 
 // Add headers
 

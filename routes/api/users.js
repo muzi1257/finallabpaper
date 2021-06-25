@@ -4,7 +4,6 @@ const bcrypt = require("bcryptjs");
 const UserModel = require("../../models/user");
 const flash = require("express-flash");
 const passport = require("passport");
-let userAuth = false;
 
 /* GET users listing. */
 router.get("/", async (req, res) => {
@@ -47,7 +46,7 @@ router.post("/register", async (req, res) => {
       User.confirm_password = hashPassword;
 
       await User.save();
-      //login
+      return res.redirect("/login");
     } else {
       req.flash("error", "Password Not Matched");
       req.flash("name", name);
@@ -56,8 +55,6 @@ router.post("/register", async (req, res) => {
       res.redirect("/register");
     }
   } catch (error) {
-    // req.flash("error", "User Already Registered");
-    // res.redirect("/register");
     res.status(404).send(error);
   }
 });
@@ -66,7 +63,7 @@ router.post("/register", async (req, res) => {
 router.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/admin",
     failureRedirect: "/login",
     failureFlash: true,
   })

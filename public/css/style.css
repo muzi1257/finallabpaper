@@ -3,19 +3,24 @@
 
 body {
   display: flex;
+ background-color: #2659e4;
   flex-direction: column;
   /* min-height: 100vh; */
 }
 .headerTop {
-  background-color: #232f3e;
+  background-color: #2659e4;
 
-  border-bottom: 1px solid #495159;
+  border-bottom: 1px solid #2659e4;
 }
 /*#495159 border*/
 .navbar {
-  background-color: #1b2530;
+  justify-content: center;
+  background-color: #0d083b;
 }
 .navbarImg {
+  justify-content: center;
+  padding-left: 100%;
+  margin-left: 80%;
   height: 180px;
   margin-top: -40px;
   margin-bottom: -50px;
@@ -30,10 +35,10 @@ body {
   color: white;
 }
 .navbar-nav > li > a:active {
-  color: #ffd200;
+  color: #ff0000;
 }
 .navbar-nav > li > a:hover {
-  color: #ffd200;
+  color: #ff0000;
 }
 .mobile-menu {
   /* display: none; */
@@ -48,13 +53,13 @@ body {
   width: 900px;
 }
 .btnSearch {
-  background-color: #ffd200;
+  background-color: #ff0000;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   color: black;
   font-size: 13px;
 }
 .btnSearch:hover {
-  background-color: #ffd200;
+  background-color: #ff0000;
 }
 .myDropdown {
   margin-left: -50px;
@@ -95,7 +100,8 @@ body {
 }
 
 .card {
-  border: 1px solid #eee;
+  background-color: #2244b49d;
+  border: 5px solid rgb(10, 21, 80);
   cursor: pointer;
 }
 
@@ -121,7 +127,7 @@ body {
 .dot {
   height: 14px;
   width: 14px;
-  background-color: green;
+  background-color: rgb(0, 30, 128);
   border-radius: 50%;
   position: absolute;
   left: 27%;
@@ -247,7 +253,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #687e71;
+  background: #001ecaa9;
   padding: 0px;
   width: 90%;
   max-width: 450px;
@@ -280,7 +286,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 .myBtn {
-  background-color: #ffd200;
+  background-color: #094b0c;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -289,8 +295,8 @@ h2.active {
   display: inline-block;
   text-transform: uppercase;
   font-size: 13px;
-  -webkit-box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
-  box-shadow: 0 10px 30px 0 rgba(95, 186, 233, 0.4);
+  -webkit-box-shadow: 0 10px 30px 0 rgba(120, 107, 241, 0.4);
+  box-shadow: 0 10px 30px 0 rgba(132, 169, 238, 0.4);
   -webkit-border-radius: 5px 5px 5px 5px;
   border-radius: 5px 5px 5px 5px;
   margin: 5px 20px 40px 20px;
@@ -469,7 +475,7 @@ input[type="text"]:placeholder {
   transition: width 0.2s;
 }
 .registerSpan {
-  color: #ffd200;
+  color: #ff1100;
 }
 
 .underlineHover:hover {
@@ -490,7 +496,7 @@ input[type="text"]:placeholder {
   width: 60%;
 }
 .loginFormImage {
-  height: 300px;
+  height: 50px;
   margin-bottom: -25%;
   margin-top: -10%;
 }
